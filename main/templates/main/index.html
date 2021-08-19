@@ -1,0 +1,520 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Hussein</title>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel=”stylesheet”>
+
+    <!-- fontawesome icons -->
+    <link rel="stylesheet" href="{% static 'main/fontawesome-free-5.15.3-web/css/all.min.css' %}">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= start navbar  ================== -->
+
+    <header class="headerArea">
+        <div class="mainMenu">
+            <nav style="background-color: white; box-shadow: 0px 0px 9px -3px rgba(0,0,0,0.73);
+            -webkit-box-shadow: 0px 0px 9px -3px rgba(0,0,0,0.73);
+            -moz-box-shadow: 0px 0px 9px -3px rgba(0,0,0,0.73);"
+                class="navbar navbar-expand-lg navbar-light fixed-top">
+                <a class="navbar-brand" href="#">
+                    <svg viewBox="676.7776 323.7148 176.4449 175.8353" width="45" height="45"
+                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                        <g opacity="1" transform="rotate(0 676.7776 323.7148)">
+                            <svg width="176.4449" height="175.8353" x="676.7776" y="323.7148" preserveAspectRatio="none"
+                                viewBox="5.000175952911377 5.1556396484375 89.9996566772461 89.688720703125">
+                                <g transform="matrix(1 0 0 1 0 0)" class="icon1c16db4ac-3b2f-44d2-a375-5934ddd28c8a">
+                                    <g transform="translate(0,-952.36216)">
+                                        <path
+                                            style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill-rule:nonzero;stroke-width:7.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+                                            d="m 49.973743,957.5178 c -0.660042,0 -1.321369,0.012 -1.983374,0.038 -10.569413,0.4392 -20.643443,4.5982 -28.444693,11.7426 -6.32663,5.8241 -10.7823696,13.3278 -12.9590296,21.572 2.472,-3.6972 5.4555696,-7.0366 8.8849796,-9.8972 a 0.87671453,0.87671453 0 0 1 0.002,0 c 11.45328,-9.5125 26.76276,-12.9832 41.198258,-9.3411 0.491005,0.1155 0.9789,0.2429 1.46378,0.3817 l 0.03104,0.01 c 0.381742,0.095 0.762245,0.1936 1.141462,0.2981 a 0.87671453,0.87671453 0 0 1 0.05568,0.019 c 0.140588,0.049 0.280871,0.099 0.420968,0.1494 l 0.01379,0 c 0.225212,0.077 0.449581,0.1567 0.672993,0.2387 a 0.87671453,0.87671453 0 0 1 0.02466,0.01 c 0.02291,0.01 0.04568,0.019 0.06849,0.027 0.831581,0.2946 1.650093,0.6239 2.454088,0.9868 8.814659,3.6369 16.255281,9.8977 21.392899,17.8754 0.09718,-8.723 -2.331501,-17.3062 -7.055023,-24.6872 -7.850206,-6.0899 -17.48146,-9.396 -27.382271,-9.4232 l 0,0 z m 31.756732,12.8837 c 1.966169,3.9899 3.366645,8.2438 4.129264,12.6444 2.511501,14.6771 -2.139367,29.673 -12.514305,40.3536 l -0.004,0 c -0.342515,0.364 -0.693891,0.7191 -1.053331,1.0664 l -0.02338,0.024 c -0.272689,0.2828 -0.548465,0.5627 -0.828237,0.8387 a 0.87671453,0.87671453 0 0 1 -0.04383,0.04 c -0.1127,0.097 -0.226077,0.1938 -0.339688,0.2899 l -0.01145,0.01 c -0.179229,0.1564 -0.360142,0.3104 -0.542878,0.4628 a 0.87671453,0.87671453 0 0 1 -0.01636,0.014 c -0.01332,0.012 -0.02679,0.021 -0.04018,0.032 -0.677761,0.58 -1.380301,1.1303 -2.104816,1.6509 -7.556641,5.8145 -16.697475,9.1281 -26.174608,9.5886 7.505727,4.4456 16.153055,6.6334 24.906702,6.2332 20.240566,-8.2578 31.591925,-29.8864 26.863587,-51.2439 -1.880493,-8.391 -6.150998,-16.0018 -12.202459,-22.0089 z m -58.458699,7.4398 c 0,0 0,0 -0.002,0 l 0.002,0 0,0 z m -0.002,0 c -4.34522,2.445 -8.2384,5.5763 -11.52673,9.2726 -0.15417,0.1747 -0.31199,0.3463 -0.46342,0.5235 -0.60855,0.7057 -1.18887,1.4362 -1.7532596,2.1801 -0.30684,0.4074 -0.60244,0.8228 -0.89535,1.2408 -0.43637,0.6178 -0.87006,1.2383 -1.27567,1.879 -0.56581,0.9017 -1.09966,1.8236 -1.60121,2.7655 -0.10732,0.1999 -0.23026,0.3894 -0.33468,0.5912 -2.96882,21.6585 10.0874696,42.3044 30.9490396,48.8875 8.20661,2.5663 16.932645,2.6731 25.160104,0.436 -4.438304,-0.2923 -8.822327,-1.207 -13.014707,-2.7468 a 0.87671453,0.87671453 0 0 1 -0.0023,0 c -13.966767,-5.1635 -24.628207,-16.6896 -28.690357,-31.0153 0,0 -0.002,0 -0.002,0 -0.14388,-0.4785 -0.27627,-0.9608 -0.39722,-1.4456 -0.11207,-0.388 -0.21904,-0.7775 -0.32098,-1.1684 a 0.87671453,0.87671453 0 0 1 -0.0129,-0.058 c -0.0277,-0.1461 -0.0549,-0.2925 -0.0813,-0.4388 -0.0471,-0.2382 -0.0913,-0.4762 -0.13287,-0.7153 a 0.87671453,0.87671453 0 0 1 -0.004,-0.025 c -0.004,-0.023 -0.007,-0.046 -0.0101,-0.068 -0.1615,-0.8694 -0.28559,-1.7451 -0.37346,-2.6248 -1.25786,-9.4526 0.4435,-19.027 4.784,-27.4655 z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </g>
+                    </svg>
+                    <svg style="margin-left: 4%;" viewBox="575 537.5817 380 41.7035" width="216"
+                        height="23.705147368421052" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                        <g opacity="1" transform="rotate(0 575 537.5817)">
+                            <svg width="380" height="41.7035" x="575" y="537.5817" preserveAspectRatio="none"
+                                viewBox="2.8711 -28.3984 262.32419999999996 28.7891">
+                                <g transform="matrix(1 0 0 1 0 0)"
+                                    class="companyNamec16db4ac-3b2f-44d2-a375-5934ddd28c8a">
+                                    <path id="id-c16db4ac-3b2f-44d2-a375-5934ddd28c8aD6z1nYkh9"
+                                        d="M30.86-18.59L30.86-16.29Q30.86-14.55 30.43-13.18Q30-11.82 29.27-10.77Q28.54-9.73 27.58-8.98Q26.62-8.24 25.58-7.77Q24.53-7.30 23.47-7.09Q22.40-6.88 21.46-6.88L21.46-6.88L9.98-6.88L9.98-11.95L21.46-11.95Q22.44-12.03 23.23-12.35Q24.02-12.68 24.59-13.22Q25.16-13.77 25.47-14.54Q25.78-15.31 25.78-16.29L25.78-16.29L25.78-18.59Q25.68-19.55 25.37-20.35Q25.06-21.15 24.52-21.72Q23.98-22.29 23.22-22.61Q22.46-22.93 21.46-22.93L21.46-22.93L10.02-22.93Q9.00-22.93 8.48-22.40Q7.95-21.88 7.95-20.88L7.95-20.88L7.95 0L2.87 0L2.87-20.88Q2.87-22.83 3.58-24.20Q4.30-25.57 5.36-26.41Q6.43-27.25 7.68-27.63Q8.93-28.01 9.98-28.01L9.98-28.01L21.46-28.01Q23.18-28.01 24.55-27.57Q25.92-27.13 26.96-26.40Q28.01-25.66 28.74-24.71Q29.47-23.75 29.95-22.71Q30.43-21.66 30.64-20.60Q30.86-19.53 30.86-18.59L30.86-18.59Z M64.59-16.68L64.59-11.33Q64.59-8.77 63.71-6.62Q62.83-4.47 61.27-2.91Q59.71-1.35 57.57-0.48Q55.43 0.39 52.91 0.39L52.91 0.39L46.04 0.39Q43.52 0.39 41.37-0.48Q39.22-1.35 37.66-2.91Q36.09-4.47 35.21-6.62Q34.32-8.77 34.32-11.33L34.32-11.33L34.32-16.68Q34.32-19.22 35.21-21.38Q36.09-23.54 37.66-25.09Q39.22-26.64 41.37-27.52Q43.52-28.40 46.04-28.40L46.04-28.40L52.91-28.40Q55.43-28.40 57.57-27.52Q59.71-26.64 61.27-25.09Q62.83-23.54 63.71-21.38Q64.59-19.22 64.59-16.68L64.59-16.68ZM59.51-11.33L59.51-16.68Q59.51-18.18 59.03-19.40Q58.55-20.63 57.69-21.49Q56.82-22.36 55.60-22.84Q54.38-23.32 52.91-23.32L52.91-23.32L46.04-23.32Q44.55-23.32 43.33-22.84Q42.11-22.36 41.23-21.49Q40.35-20.63 39.87-19.40Q39.39-18.18 39.39-16.68L39.39-16.68L39.39-11.33Q39.39-9.82 39.87-8.60Q40.35-7.38 41.23-6.51Q42.11-5.64 43.33-5.17Q44.55-4.69 46.04-4.69L46.04-4.69L52.87-4.69Q54.36-4.69 55.58-5.17Q56.80-5.64 57.68-6.51Q58.55-7.38 59.03-8.60Q59.51-9.82 59.51-11.33L59.51-11.33Z M97.60-21.84L97.60-18.59Q97.60-16.86 97.17-15.49Q96.74-14.12 96.01-13.08Q95.27-12.03 94.32-11.29Q93.36-10.55 92.31-10.07Q91.27-9.59 90.21-9.38Q89.14-9.16 88.20-9.16L88.20-9.16L98.81 0L90.96 0L80.37-9.16L76.72-9.16L76.72-14.24L88.20-14.24Q89.16-14.32 89.95-14.64Q90.74-14.96 91.32-15.51Q91.89-16.05 92.21-16.83Q92.52-17.60 92.52-18.59L92.52-18.59L92.52-21.80Q92.52-22.23 92.41-22.45Q92.30-22.68 92.14-22.78Q91.97-22.89 91.79-22.91Q91.60-22.93 91.45-22.93L91.45-22.93L74.69-22.93L74.69 0L69.61 0L69.61-25.45Q69.61-25.98 69.80-26.45Q70-26.91 70.34-27.27Q70.68-27.62 71.15-27.81Q71.62-28.01 72.17-28.01L72.17-28.01L91.45-28.01Q93.14-28.01 94.32-27.39Q95.49-26.78 96.22-25.85Q96.95-24.92 97.28-23.85Q97.60-22.77 97.60-21.84L97.60-21.84Z M127.79-28.01L127.79-22.93L116.60-22.93L116.60 0L111.52 0L111.52-22.93L100.31-22.93L100.31-28.01L127.79-28.01Z M154.69-16.56L154.69-11.45L138.63-11.45L138.63-16.56L154.69-16.56ZM156.95-28.01L156.95-22.93L136.60-22.93L136.60 0L131.52 0L131.52-25.45Q131.52-25.98 131.72-26.45Q131.91-26.91 132.26-27.27Q132.60-27.62 133.07-27.81Q133.54-28.01 134.08-28.01L134.08-28.01L156.95-28.01Z M190.27-16.68L190.27-11.33Q190.27-8.77 189.39-6.62Q188.52-4.47 186.95-2.91Q185.39-1.35 183.25-0.48Q181.11 0.39 178.59 0.39L178.59 0.39L171.72 0.39Q169.20 0.39 167.05-0.48Q164.90-1.35 163.34-2.91Q161.78-4.47 160.89-6.62Q160-8.77 160-11.33L160-11.33L160-16.68Q160-19.22 160.89-21.38Q161.78-23.54 163.34-25.09Q164.90-26.64 167.05-27.52Q169.20-28.40 171.72-28.40L171.72-28.40L178.59-28.40Q181.11-28.40 183.25-27.52Q185.39-26.64 186.95-25.09Q188.52-23.54 189.39-21.38Q190.27-19.22 190.27-16.68L190.27-16.68ZM185.20-11.33L185.20-16.68Q185.20-18.18 184.72-19.40Q184.24-20.63 183.37-21.49Q182.50-22.36 181.28-22.84Q180.06-23.32 178.59-23.32L178.59-23.32L171.72-23.32Q170.23-23.32 169.01-22.84Q167.79-22.36 166.91-21.49Q166.04-20.63 165.56-19.40Q165.08-18.18 165.08-16.68L165.08-16.68L165.08-11.33Q165.08-9.82 165.56-8.60Q166.04-7.38 166.91-6.51Q167.79-5.64 169.01-5.17Q170.23-4.69 171.72-4.69L171.72-4.69L178.55-4.69Q180.04-4.69 181.26-5.17Q182.48-5.64 183.36-6.51Q184.24-7.38 184.72-8.60Q185.20-9.82 185.20-11.33L185.20-11.33Z M221.02-5.08L221.02 0L197.85 0Q197.30 0 196.84-0.20Q196.37-0.39 196.03-0.73Q195.68-1.07 195.49-1.54Q195.29-2.01 195.29-2.56L195.29-2.56L195.29-28.01L200.37-28.01L200.37-5.08L221.02-5.08Z M229.86-28.01L229.86 0L224.79 0L224.79-28.01L229.86-28.01Z M265.20-16.68L265.20-11.33Q265.20-8.77 264.32-6.62Q263.44-4.47 261.88-2.91Q260.31-1.35 258.17-0.48Q256.04 0.39 253.52 0.39L253.52 0.39L246.64 0.39Q244.12 0.39 241.97-0.48Q239.82-1.35 238.26-2.91Q236.70-4.47 235.81-6.62Q234.92-8.77 234.92-11.33L234.92-11.33L234.92-16.68Q234.92-19.22 235.81-21.38Q236.70-23.54 238.26-25.09Q239.82-26.64 241.97-27.52Q244.12-28.40 246.64-28.40L246.64-28.40L253.52-28.40Q256.04-28.40 258.17-27.52Q260.31-26.64 261.88-25.09Q263.44-23.54 264.32-21.38Q265.20-19.22 265.20-16.68L265.20-16.68ZM260.12-11.33L260.12-16.68Q260.12-18.18 259.64-19.40Q259.16-20.63 258.29-21.49Q257.42-22.36 256.20-22.84Q254.98-23.32 253.52-23.32L253.52-23.32L246.64-23.32Q245.16-23.32 243.94-22.84Q242.71-22.36 241.84-21.49Q240.96-20.63 240.48-19.40Q240-18.18 240-16.68L240-16.68L240-11.33Q240-9.82 240.48-8.60Q240.96-7.38 241.84-6.51Q242.71-5.64 243.94-5.17Q245.16-4.69 246.64-4.69L246.64-4.69L253.48-4.69Q254.96-4.69 256.18-5.17Q257.40-5.64 258.28-6.51Q259.16-7.38 259.64-8.60Q260.12-9.82 260.12-11.33L260.12-11.33Z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </g>
+                    </svg>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="mr-auto"></div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ================= end navbar  ================== -->
+
+    <div class="container">
+        {% if messages %}
+        {% for message in messages %}
+        <div style="justify-content: center; align-items: center; align-content: center; display: flex;"
+            class="alert alert-{{ message.tags }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+
+    <!-- ================= start main area  ================== -->
+
+    <main class="main">
+        <section style="margin-top: 7%;" id="home" class="banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 title">
+                        <h3 class="title-text">Hey</h3>
+                        <h1 class="title-text" style="line-height: 80px;">I am
+                            Hussein</h1>
+                        <h4 class="title-text text-uppercase" style="letter-spacing: 6px;">Web Developer</h4>
+                        <div class="divButton">
+                            <div class="d-flex flex-row flex-wrap">
+                                {% comment %} <button type="button" class="btn btn-grad mr-4 text-uppercase">Hire
+                                    me</button> {% endcomment %}
+                                <a href="media/" download="Hussein's Resume.pdf" type="button"
+                                    class="btn btn-grad2 mr-4 text-uppercase">Get
+                                    CV</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 banner-image">
+                        <img src="{% static 'main/img/banner/programming-banner-image.jpg' %}" alt="banner Image"
+                            class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= end main area  ================== -->
+
+
+        <!-- ================= start about me  ================== -->
+
+        <section id="about" class="about" style="margin-top: 4%;">
+            <div class="container">
+                <div class="row">
+                    <div style="padding-right: 50px" class="col-lg-6 col-md-12">
+                        <div class="aboutImage">
+                            <img src="{% static 'main/img/about-me.png' %}" alt="About me" class="img-fluid">
+                        </div>
+                    </div>
+                    <div style="padding-left: 85px" class="col-lg-6 col-md-12 about-title">
+                        <h2 class="text-uppercase pt-5">
+                            <span>Let me</span>
+                            <span class="intro">Introduce</span>
+                            <span>Myself</span>
+                        </h2>
+                        <div class="parag py-4 w-75">
+                            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde pariatur totam
+                                fuga deleniti obcaecati eaque eius excepturi dolor consequatur odit.</p>
+                            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, doloremque!
+                                Voluptatibus recusandae, necessitatibus nemo earum eligendi nobis nihil repudiandae
+                                quibusdam porro voluptatem laboriosam a voluptatum et repellendus accusamus! Doloribus,
+                                alias.</p>
+                        </div>
+                        <a href="media/" download="Hussein's Resume.pdf" class="btn btn-grad text-uppercase"
+                            type="button">Download CV</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= end about me  ================== -->
+
+
+
+        <!-- ================= start skills  ================== -->
+
+        <section id="skills" class="skills" style="margin-top: 8%;">
+            <div class="container">
+                <h1 class="skill-title">SKILLS</h1>
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="progress_bar">
+                            <img src="https://img.icons8.com/color/48/000000/css3.png" />
+                            {% comment %} <div class="pro-bar"
+                                style="width: 70%; background: linear-gradient(to right,  #75b889 35%,#9fe3fa 68%);">
+                                <span>70%</span>
+                            </div> {% endcomment %}
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 70%"
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">70%</div>
+                            </div>
+                        </div>
+                        <div class="progress_bar">
+                            <img style="margin-top: 5px; margin-bottom: 5px;"
+                                src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" />
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 55%"
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">55%</div>
+                            </div>
+                        </div>
+                        <div class="progress_bar">
+                            <img style="margin-top: 15px; margin-bottom: 12px;"
+                                src="https://img.icons8.com/color/48/000000/html-5.png" />
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 90%"
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">90%</div>
+                            </div>
+                        </div>
+                        <div class="progress_bar">
+                            <img style="margin-top: 37px; margin-bottom: 3px;"
+                                src="https://img.icons8.com/color/48/000000/javascript.png" />
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 15%"
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">15%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="progress_bar">
+                            <img src="https://img.icons8.com/color/48/000000/python.png" />
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 65%"
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">65%</div>
+                            </div>
+                        </div>
+                        <div class="progress_bar">
+                            <img src="https://img.icons8.com/color/56/000000/mysql-logo.png" />
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 50%"
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+                            </div>
+                        </div>
+                        <div class="progress_bar">
+                            <img style="margin-top: 15px; margin-bottom: 15px;"
+                                src="https://img.icons8.com/color/45/000000/mongodb.png" />
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 25%"
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                            </div>
+                        </div>
+                        <div class="progress_bar">
+                            <img style="margin-top: 28px;" src="https://img.icons8.com/color/60/000000/django.png" />
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 60%"
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">60%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= end skills  ================== -->
+
+
+        <!-- ================= start projects  ================== -->
+
+        <section id="projects" class="projects" style="margin-top: 8%;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center project-title">
+                        <h1 class="text-uppercase title-text">Projects</h1>
+                        <p class="para">
+                            Indivisual and Team Projects
+                        </p>
+                    </div>
+                </div>
+                <div class="container projectList">
+                    <div class="row justify-content-center">
+                        {% for project in projects %}
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div id="pr1" class="indivisualProject">
+                                <div class="project-img text-center py-4">
+                                    <img class="project-img" style="height: 185px; width: 185px;"
+                                        src="{{ project.projectImage.url }}" alt="service1">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-uppercase"><a style="color: black;"
+                                            href="{{ project.projectLink }}" target="_blank">
+                                            {{ project.projectName }}</a></h5>
+                                    <p class="card-text text-secondary">{{ project.projectDescription }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% comment %} <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div id="pr1" class="indivisualProject">
+                                <div class="project-img text-center py-4">
+                                    <img class="project-img"
+                                        src="{% static 'main/img/projects/smart-attendance-system.png' %}"
+                                        alt="service1">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-uppercase"><a style="color: black;"
+                                            href="https://www.google.com" target="_blank">
+                                            Smart Attendance System</a></h5>
+                                    <p class="card-text text-secondary">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Quas, perspiciatis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div id="pr2" class="indivisualProject">
+                                <div class="project-img text-center py-4">
+                                    <img class="project-img" style="height: 185px; width: 185px;"
+                                        src="{% static 'main/img/projects/stock-market.png' %}" alt="service1">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-uppercase"><a style="color: black;"
+                                            href="https://www.google.com" target="_blank">Stock Market Prediction</a>
+                                    </h5>
+                                    <p class="card-text text-secondary">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Quas, perspiciatis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div id="pr3" class="indivisualProject">
+                                <div class="project-img text-center py-4">
+                                    <img style="height: 185px; width: 185px;"
+                                        src="{% static 'main/img/projects/dice.png' %}" alt="service1">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-uppercase"><a style="color: black;"
+                                            href="https://www.google.com" target="_blank">Dice Roller App (Java)<a />
+                                    </h5>
+                                    <p class="card-text text-secondary">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Quas, perspiciatis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div id="pr4" class="indivisualProject">
+                                <div class="project-img text-center py-4">
+                                    <img style="height: 185px; width: 185px;"
+                                        src="{% static 'main/img/projects/guess.png' %}" alt="service1">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-uppercase"><a style="color: black;"
+                                            href="https://www.google.com" target="_blank">Guess Random Number<a /></h5>
+                                    <p class="card-text text-secondary">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Quas, perspiciatis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div id="pr5" class="indivisualProject">
+                                <div class="project-img text-center py-4">
+                                    <img style="height: 185px; width: 185px;"
+                                        src="{% static 'main/img/projects/library.png' %}" alt="service1">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-uppercase"><a style="color: black;"
+                                            href="https://www.google.com" target="_blank">Library Management Sys<a />
+                                    </h5>
+                                    <p class="card-text text-secondary">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Quas, perspiciatis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div id="pr6" class="indivisualProject">
+                                <div class="project-img text-center py-4">
+                                    <img style="height: 185px; width: 185px;"
+                                        src="{% static 'main/img/projects/hangman-game.png' %}" alt="service1">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-uppercase"><a style="color: black;"
+                                            href="https://www.google.com" target="_blank">Hangman Game in Console</a>
+                                    </h5>
+                                    <p class="card-text text-secondary">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Quas, perspiciatis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> {% endcomment %}
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= end projects  ================== -->
+
+        <section id="contact" class="contact-me">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-12">
+                    <div class="container-contact100">
+
+                        <div class="wrap-contact100">
+                            {% comment %} <form method="POST">
+                                {% csrf_token %}
+                                <fieldset>
+                                    {{ form }}
+                                </fieldset>
+                                <button class="btn btn-primary" type="submit">submit</button>
+                            </form> {% endcomment %}
+                            <form method="POST" class="contact100-form validate-form">
+                                {% csrf_token %}
+                                <span class="contact100-form-title">
+                                    Send Us A Message
+                                </span>
+
+                                <div class="wrap-input100 validate-input" data-validate="Please enter your name">
+                                    <input class="input100" type="text" name="fullName" id="id_fullName"
+                                        placeholder="Full Name">
+                                    <span class="focus-input100"></span>
+                                </div>
+
+                                <div class="wrap-input100 validate-input"
+                                    data-validate="Please enter your email: e@a.x">
+                                    <input class="input100" type="text" name="emailId" id="id_emailId"
+                                        placeholder="E-mail">
+                                    <span class="focus-input100"></span>
+                                </div>
+
+                                <div class="wrap-input100 validate-input" data-validate="Please enter your phone">
+                                    <input class="input100" type="text" name="phoneNumber" id="id_phoneNumber"
+                                        placeholder="Phone">
+                                    <span class="focus-input100"></span>
+                                </div>
+
+                                <div class="wrap-input100 validate-input" data-validate="Please enter your message">
+                                    <input class="input100" type="text" name="subject" id="id_subject"
+                                        placeholder="Email Subject">
+                                    <span class="focus-input100"></span>
+                                </div>
+
+                                <div class="wrap-input100 validate-input" data-validate="Please enter your message">
+                                    <textarea class="input100" name="message" id="id_message"
+                                        placeholder="Your Message"></textarea>
+                                    <span class="focus-input100"></span>
+                                </div>
+
+                                <div class="container-contact100-form-btn">
+                                    <button type="submit" class="contact100-form-btn">
+                                        <span>
+                                            <i class="fas fa-paper-plane"></i>
+                                            Send
+                                        </span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue-grey lighten-5">
+
+        <div style="background: linear-gradient(45deg, #348F50 0%, #56B4D3 51%, #348F50 100%);">
+            <div class="container">
+
+                <!-- Grid row-->
+                <div class="row py-4 d-flex align-items-center">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0">Connect with me!</h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+                        <!-- Facebook -->
+                        <a class="fb-ic" href="https://github.com/hussein-hub" target="_blank">
+                            <i class="fab fa-github white-text mr-4"> </i>
+                        </a>
+
+                        <a class="fb-ic" href="https://twitter.com/HusseinMotiwala" target="_blank">
+                            <i class="fab fa-twitter white-text mr-4"> </i>
+                        </a>
+                        <!-- Twitter -->
+                        <a class="tw-ic" href="https://www.hackerrank.com/hussein_motiwala" target="_blank">
+                            <i class="fab fa-hackerrank white-text mr-4"></i>
+                        </a>
+                        <!--Linkedin -->
+                        <a class="li-ic" href="https://www.linkedin.com/in/hussein-motiwala-b760a3192/" target="_blank">
+                            <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                        </a>
+
+                        <a class="li-ic" href="https://www.codechef.com/users/hussein_123" target="_blank">
+                            <i class="fas fa-code white-text mr-4"></i>
+                        </a>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row-->
+
+            </div>
+        </div>
+
+    </footer>
+    <!-- Footer -->
+
+    <!-- bootrsap js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    {% comment %}
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> {% endcomment %}
+    {% comment %}
+    <script src="https://unpkg.com/scrollreveal"></script> {% endcomment %}
+    {% comment %}
+    <script src="{% static 'main/js/main.js' %}"></script> {% endcomment %}
+</body>
+
+</html>
