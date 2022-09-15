@@ -26,7 +26,8 @@ SECRET_KEY = 'your key'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['hussein-motiwala.herokuapp.com']
+ALLOWED_HOSTS = ['*', 'https://hussein-hub-portfolio-q4grprrx54gcqx-8000.githubpreview.dev']
+CSRF_TRUSTED_ORIGINS = ['https://hussein-hub-portfolio-q4grprrx54gcqx-8000.githubpreview.dev']
 
 
 # Application definition
@@ -134,12 +135,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMIAL_PORT = 587
-EMAIL_HOST_USER  = 'your email'
-EMAIL_HOST_PASSWORD = 'your password'
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMIAL_PORT = 587
+# EMAIL_HOST_USER  = 'your email'
+# EMAIL_HOST_PASSWORD = 'your password'
+# EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = False
 
-import django_heroku
-django_heroku.settings(locals())
+# import django_heroku
+# django_heroku.settings(locals())
